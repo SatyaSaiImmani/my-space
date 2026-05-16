@@ -64,7 +64,7 @@ export default function MainContent() {
             I&apos;m Satya
           </h1>
           <a
-            href="/SRI SATYA SAI IMMANI RESUME LATEST.pdf"
+            href="/CrossFunctionalSoftwareEngineer.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 text-white text-sm tracking-widest w-fit hover:bg-green-800 transition-colors"
           >
