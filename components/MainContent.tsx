@@ -64,18 +64,18 @@ export default function MainContent() {
             I&apos;m Satya
           </h1>
           <a
-            href="/CrossFunctionalSoftwareEngineer.pdf"
-            download
+            href="#CONTACT"
+            // download
             className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 text-white text-sm tracking-widest w-fit hover:bg-green-800 transition-colors"
           >
-            DOWNLOAD MY RESUME
-            <Image
+            REQUEST MY ENTIRE RESUME HERE
+            {/* <Image
               src="/download.svg"
               width={16}
               height={16}
               alt="download"
               className="invert"
-            />
+            /> */}
           </a>
         </div>
       </section>
