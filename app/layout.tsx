@@ -17,34 +17,37 @@ const playwriteNO = Playwrite_NO({
 });
 
 export const metadata: Metadata = {
-  title: "Sri Satya Sai Immani | Full-Stack Software Engineer",
+  title: "Sri Satya Sai Immani | AI Engineer",
   description:
-    "Portfolio of Sri Satya Sai Immani — Full-Stack Software Engineer specializing in Java, Spring Boot, Python, FastAPI, microservices, and cloud-native architecture. Previously at Deloitte and Case Western Reserve University.",
+    "Portfolio of Sri Satya Sai Immani — AI Engineer building RAG pipelines, agentic systems, and applied ML training workloads, with a background in enterprise workflow automation at Deloitte and generative AI research at Case Western Reserve University.",
   keywords: [
     "Sri Satya Sai Immani",
     "Satya Immani",
-    "Full-Stack Software Engineer",
-    "Java Engineer",
-    "Spring Boot",
+    "AI Engineer",
+    "Generative AI",
+    "RAG",
+    "LangChain",
+    "Agentic Systems",
     "Python",
     "FastAPI",
-    "Microservices",
+    "AWS",
+    "ServiceNow",
     "Deloitte",
     "Case Western Reserve University",
-    "Software Engineer Portfolio",
+    "Machine Learning Engineer Portfolio",
   ],
   authors: [{ name: "Sri Satya Sai Immani" }],
   openGraph: {
-    title: "Sri Satya Sai Immani | Full-Stack Software Engineer",
+    title: "Sri Satya Sai Immani | AI Engineer",
     description:
-      "Backend-first Full-Stack Engineer building scalable systems with Java, Spring Boot, Python, and FastAPI.",
+      "AI Engineer building RAG pipelines, agentic systems, and applied ML — with enterprise workflow automation experience at Deloitte.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Sri Satya Sai Immani | Full-Stack Software Engineer",
+    title: "Sri Satya Sai Immani | AI Engineer",
     description:
-      "Backend-first Full-Stack Engineer building scalable systems with Java, Spring Boot, Python, and FastAPI.",
+      "AI Engineer building RAG pipelines, agentic systems, and applied ML — with enterprise workflow automation experience at Deloitte.",
   },
 };
 

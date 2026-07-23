@@ -28,7 +28,7 @@ export const achievements: Achievement[] = [
     id: "deloitte-best-employee",
     title: "Best Employee Nomination — Deloitte",
     description:
-      "Nominated as Best Employee at Deloitte for independently owning and delivering an end-to-end project, from requirements through production deployment as the lead architect.",
+      "Nominated as Best Employee at Deloitte for independently owning and delivering the HR workflow integration and analytics work end to end, from requirements through production release.",
     badge: "Award",
     badgeColor: "bg-green-100",
     badgeIconColor: "text-green-600",

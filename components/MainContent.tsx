@@ -64,18 +64,18 @@ export default function MainContent() {
             I&apos;m Satya
           </h1>
           <a
-            href="#CONTACT"
-            // download
+            href="/SriSatyaSaiImmani-Resume.docx"
+            download
             className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 text-white text-sm tracking-widest w-fit hover:bg-green-800 transition-colors"
           >
-            REQUEST MY ENTIRE RESUME HERE
-            {/* <Image
+            DOWNLOAD MY RESUME
+            <Image
               src="/download.svg"
               width={16}
               height={16}
               alt="download"
               className="invert"
-            /> */}
+            />
           </a>
         </div>
       </section>
@@ -94,20 +94,21 @@ export default function MainContent() {
             WHO AM I?
           </h2>
           <p className="text-base text-[#3a3a3a] leading-relaxed text-justify mb-6">
-            <strong>Hi, I&apos;m Satya - </strong> a Full-Stack Software
-            Engineer who builds backend-first systems with Java, Spring Boot,
-            Python, and FastAPI. I work across the stack, but my instinct is
-            always to start from the architecture.
+            <strong>Hi, I&apos;m Satya - </strong> an AI Engineer building RAG
+            pipelines, agentic systems, and applied machine learning, with a
+            foundation in enterprise workflow automation. I work across the
+            stack, but my instinct is always to start from the architecture.
           </p>
           <p className="text-base text-[#3a3a3a] leading-relaxed text-justify mb-6">
             I thrive developing products in a collaborative team and work
-            efficiently solo. At Deloitte, I worked as a Full-Stack Software
-            Engineer on enterprise systems that had to be observable,
-            maintainable, and reliable at scale spanning backend services,
-            integrations, and production support. I&apos;ve worked with AWS,
-            Kafka, Docker, Kubernetes, and event-driven architecture, and
-            applied that same discipline to AI integrations at Case Western
-            Reserve University.
+            efficiently solo. At Deloitte, I worked as a Software Analyst on
+            the ServiceNow platform, building enterprise HR workflow
+            automation and integrations that had to be observable,
+            maintainable, and reliable at scale. I&apos;ve since applied that
+            same discipline to generative AI systems at Case Western Reserve
+            University - building RAG pipelines, agentic systems, and ML
+            training workloads with Python, FastAPI, LangChain, and AWS on
+            GPU/HPC clusters.
           </p>
           <p className="text-base text-[#3a3a3a] leading-relaxed text-justify">
             My goal is to build scalable and efficient systems with clean code

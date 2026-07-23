@@ -28,9 +28,6 @@ export default function ExperienceCard({
 
   return (
     <div className="relative">
-      {/* Timeline dot */}
-      <span className="absolute -left-[calc(1.5rem+1px)] top-6 size-3 rounded-full bg-green-700 border-2 border-white shadow-sm" />
-
       {/* Card */}
       <div
         ref={ref}

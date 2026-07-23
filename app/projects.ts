@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     id: "rabbit-hole",
     title: "RabbitHole",
-    subtitle: "Python / Next.js / FastAPI",
+    subtitle: "Python / Next.js / FastAPI / Gemini",
     description:
       "An AI-powered research gap analyzer that automates literature review — reducing weeks of reading to minutes.",
     expandedDescription:
@@ -81,5 +81,59 @@ export const projects: Project[] = [
     images: [],
     imageAlts: [],
     color: "#fefce8",
+  },
+  {
+    id: "gnn-cwe-classification",
+    title: "Multiclass CWE Classification with Graph Neural Networks",
+    subtitle: "Python / PyTorch / PyTorch Geometric / SLURM",
+    description:
+      "An end-to-end GNN pipeline classifying C/C++ vulnerabilities into the top-30 CWE classes from the BigVul dataset.",
+    expandedDescription:
+      "Built an end-to-end graph neural network pipeline classifying C/C++ vulnerabilities into the top-30 CWE classes using the BigVul dataset. Source code is represented as Inter-Procedural Abstract Graphs and used to train Gated Graph Neural Networks on SLURM-managed GPU clusters, with class-level disparity analysis to surface where the model under-performs.",
+    features: [
+      "Code-to-graph representation via Inter-Procedural Abstract Graphs",
+      "Gated Graph Neural Network architecture for multiclass classification",
+      "Training on SLURM-managed GPU clusters for HPC-scale workloads",
+      "Class-level disparity analysis across 30 CWE categories",
+      "End-to-end pipeline from BigVul dataset ingestion to evaluation",
+    ],
+    audience: [
+      { title: "Security researchers studying vulnerability classification" },
+      { title: "ML engineers working with graph-structured code representations" },
+      { title: "HPC practitioners benchmarking GNN training at scale" },
+    ],
+    referenceLinks: [
+      { label: "GitHub", href: "https://github.com/SatyaSaiImmani" },
+    ],
+    images: [],
+    imageAlts: [],
+    color: "#eff6ff",
+  },
+  {
+    id: "hpc-sorting-benchmark",
+    title: "HPC Sorting Algorithm Benchmark",
+    subtitle: "C++ / CUDA / SLURM / CMake",
+    description:
+      "A benchmark suite comparing sorting algorithms across CPU and GPU implementations on an HPC cluster.",
+    expandedDescription:
+      "Benchmarked comparison-based and non-comparison-based sorting algorithms across CPU and GPU (CUDA) implementations on an HPC cluster, automating dataset generation, SLURM job submission, and performance visualization to compare throughput and scaling behavior.",
+    features: [
+      "CPU and GPU (CUDA) implementations of comparison and non-comparison sorts",
+      "Automated dataset generation across problem sizes",
+      "SLURM job scripts for reproducible HPC benchmarking",
+      "Performance visualization comparing throughput and scaling",
+      "CMake-based build system for cross-platform compilation",
+    ],
+    audience: [
+      { title: "HPC engineers evaluating sorting algorithm performance" },
+      { title: "Systems researchers comparing CPU vs. GPU workloads" },
+      { title: "Students studying parallel algorithm design" },
+    ],
+    referenceLinks: [
+      { label: "GitHub", href: "https://github.com/SatyaSaiImmani" },
+    ],
+    images: [],
+    imageAlts: [],
+    color: "#fdf4ff",
   },
 ];

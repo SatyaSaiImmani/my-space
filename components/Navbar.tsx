@@ -43,7 +43,7 @@ function NavbarContent({
 
       {/* Role */}
       <div className="Role flex items-center justify-center mt-2 font-light text-green-700 text-[15px]">
-        FULL STACK SOFTWARE ENGINEER
+        AI ENGINEER
       </div>
 
       {/* Page Sections */}
