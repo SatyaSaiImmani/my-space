@@ -2,21 +2,24 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet"
+import type { NavItem } from "@/lib/site-nav"
 
 type NavbarProps = {
-  sections: string[]
+  navItems: NavItem[]
   socials: Record<string, string>
 }
 
 function NavbarContent({
-  sections,
+  navItems,
   socials,
   activeId,
   onNavigate,
 }: {
-  sections: string[]
+  navItems: NavItem[]
   socials: Record<string, string>
   activeId: string
   onNavigate?: () => void
@@ -48,23 +51,23 @@ function NavbarContent({
 
       {/* Page Sections */}
       <div className="flex flex-col items-center mt-4">
-        {sections.map((section) => {
-          const isActive = section === activeId
+        {navItems.map(({ label, href }) => {
+          const isActive = label === activeId
           return (
             <div
-              key={section}
+              key={label}
               className={`py-2 text-sm tracking-widest cursor-pointer transition-colors duration-300 ${
                 isActive ? "text-green-700" : "text-[#3a3a3a] hover:text-green-700"
               }`}
             >
-              <a href={`#${section}`} onClick={onNavigate} className="relative group">
-                <span>{section}</span>
+              <Link href={href} onClick={onNavigate} className="relative group">
+                <span>{label}</span>
                 <span
                   className={`absolute -bottom-1 left-0 w-full h-0.5 bg-green-700 rounded-full transform transition-transform duration-300 origin-center group-hover:scale-x-100 ${
                     isActive ? "scale-x-100" : "scale-x-0"
                   }`}
                 />
-              </a>
+              </Link>
             </div>
           )
         })}
@@ -82,9 +85,10 @@ function NavbarContent({
   )
 }
 
-export default function Navbar({ sections, socials }: NavbarProps) {
+export default function Navbar({ navItems, socials }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [activeId, setActiveId] = useState("HOME")
+  const pathname = usePathname()
 
   useEffect(() => {
     const handler = (e: Event) => setActiveId((e as CustomEvent<string>).detail)
@@ -92,11 +96,13 @@ export default function Navbar({ sections, socials }: NavbarProps) {
     return () => window.removeEventListener("sectionchange", handler)
   }, [])
 
+  const effectiveActiveId = pathname.startsWith("/articles") ? "ARTICLES" : activeId
+
   return (
     <>
       {/* Desktop sidebar — hidden below lg */}
       <aside className="hidden lg:flex lg:w-1/5 lg:flex-none bg-[#f0f0f0] flex-col">
-        <NavbarContent sections={sections} socials={socials} activeId={activeId} />
+        <NavbarContent navItems={navItems} socials={socials} activeId={effectiveActiveId} />
       </aside>
 
       {/* Mobile hamburger — hidden at lg and above */}
@@ -113,9 +119,9 @@ export default function Navbar({ sections, socials }: NavbarProps) {
         <SheetContent side="left" className="w-4/5 sm:max-w-xs bg-[#f0f0f0] overflow-y-auto p-0">
           <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
           <NavbarContent
-            sections={sections}
+            navItems={navItems}
             socials={socials}
-            activeId={activeId}
+            activeId={effectiveActiveId}
             onNavigate={() => setIsOpen(false)}
           />
         </SheetContent>

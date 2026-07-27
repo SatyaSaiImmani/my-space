@@ -8,7 +8,7 @@ Next.js App Router root. Contains the global layout, the main portfolio page, gl
 Root layout that wraps every page. Loads Google Fonts (Geist Sans, Geist Mono, Playwrite NO), sets SEO metadata (title, description, OpenGraph, Twitter), and applies CSS font variables to the `<html>` and `<body>` elements.
 
 ### `page.tsx`
-The portfolio home page. Defines the ordered sections array (`HOME`, `ABOUT`, `MY WORK`, etc.) and social links record, then composes `Navbar` and `MainContent` into a responsive flex layout — sidebar visible on `lg+`, hidden on mobile.
+The portfolio home page. Imports the shared `navLinks`/`socials` from `lib/site-nav.ts`, then composes `Navbar` and `MainContent` into a responsive flex layout — sidebar visible on `lg+`, hidden on mobile.
 
 ### `globals.css`
 Global stylesheet. Imports Tailwind CSS v4, `tw-animate-css`, and the shadcn/ui Tailwind preset. Also declares the `--font-main-name` CSS variable used by the custom name font.
@@ -16,3 +16,4 @@ Global stylesheet. Imports Tailwind CSS v4, `tw-animate-css`, and the shadcn/ui 
 ## Sub-routes
 
 - `scratchpad/` — isolated playground for developing and testing UI components visually before integrating them into the main portfolio.
+- `articles/` — real App Router routes (not in-page anchors) for the Articles section: a list page and a dynamic `[id]` detail page. See `articles/CLAUDE.md`.
